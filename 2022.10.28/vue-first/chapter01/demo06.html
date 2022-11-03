@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app" >
+  <!---->
+  <mudao v-for="item in items" v-bind:wang="item"></mudao>
+</div>
+
+<!--导入vue.js-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+
+<!--控制视图层-->
+<script>
+
+  // 定义一个Vue的组件component(也可认为组件即自定义标签)
+  Vue.component("mudao",{
+      // props用于接收参数
+      props: ['wang'],
+      template: '<li>{{wang}}</li>'
+  });
+
+  var vm = new Vue({
+    // 绑定视图部分的元素
+    el: "#app",
+    // 数据
+    data: {
+      items: ['Java','Linux','前端']
+    }
+
+  });
+</script>
+</body>
+</html>

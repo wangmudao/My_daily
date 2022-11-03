@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app" >
+  <select v-model="selected">
+    <option value="" disabled>--请选择--</option>
+    <option >A</option>
+    <option >B</option>
+    <option >C</option>
+  </select>
+  <h2>你选择的是{{selected}}</h2>
+</div>
+
+<!--导入vue.js-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+
+<!--控制视图层-->
+<script>
+  var vm = new Vue({
+    // 绑定视图部分的元素
+    el: "#app",
+    // 数据
+    data: {
+      selected: ""
+     }
+  });
+</script>
+</body>
+</html>
